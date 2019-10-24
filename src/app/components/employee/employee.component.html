@@ -1,0 +1,16 @@
+<div class="container">
+  <span>
+    {{employee.id}}
+  </span>
+  <span>
+    {{employee.employee_name}}
+  </span>
+  <span>
+    {{employee.employee_salary}}
+  </span>
+  <span>
+    {{employee.employee_age}}
+  </span>
+
+  <button (click)="onDelete.emit(employee)">delete</button>
+</div>
