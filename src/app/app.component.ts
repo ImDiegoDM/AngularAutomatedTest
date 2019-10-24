@@ -11,17 +11,18 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class AppComponent {
   fetching = false;
   error = false;
-
   creating = false;
 
   formGroup = new FormGroup({
-    name:new FormControl('',[Validators.required]),
-    salary:new FormControl('',[Validators.required]),
-    age:new FormControl('',[Validators.required]),
-    imageUrl:new FormControl('')
+    employee_name:new FormControl('',[Validators.required]),
+    employee_salary:new FormControl('',[Validators.required]),
+    employee_age:new FormControl('',[Validators.required]),
+    profile_image:new FormControl('')
   });
 
   employees:Employee[];
+
+  go = true;
 
   constructor(private employeeService:EmployeeService){}
 
@@ -33,7 +34,6 @@ export class AppComponent {
     this.fetching = true;
     try{
       this.employees = await this.employeeService.getEmployees();
-      console.log(this.employees)
     }catch (err) {
       this.error = true;
     }

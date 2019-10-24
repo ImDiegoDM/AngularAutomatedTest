@@ -3,19 +3,19 @@
   <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
     <div class="input-container w25">
       <label for="">Name</label>
-      <input formControlName="name" type="text">
+      <input formControlName="employee_name" type="text">
     </div>
     <div class="input-container w25">
       <label for="">Salary</label>
-      <input formControlName="salary" type="text">
+      <input formControlName="employee_salary" type="text">
     </div>
     <div class="input-container w25">
       <label for="">Age</label>
-      <input formControlName="age" type="text">
+      <input formControlName="employee_age" type="text">
     </div>
     <div class="input-container w25">
       <label for="">Image Url</label>
-      <input formControlName="imageUrl" type="text">
+      <input formControlName="profile_image" type="text">
     </div>
     <div class="button-cotainer">
       <input *ngIf="!creating" [disabled]="!formGroup.valid" type="submit" value="criar">
